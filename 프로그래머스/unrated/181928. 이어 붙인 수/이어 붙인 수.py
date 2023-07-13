@@ -8,7 +8,3 @@ def solution(num_list):
             odd += str(i)
     if even and odd:
         return int(even)+int(odd)
-    elif even:
-        return int(even)
-    elif odd:
-        return int(odd)
