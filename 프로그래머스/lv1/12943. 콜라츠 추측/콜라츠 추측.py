@@ -8,5 +8,4 @@ def solution(num):
             num = num * 3 + 1
     if num == 1:
         return answer
-    elif answer == 501:
-        return -1
+    return -1
