@@ -1,6 +1,9 @@
+
 def solution(arr):
-    st = []
-    for i in range(len(arr)):
-        if i == 0 or st[-1] != arr[i]:
-            st.append(arr[i])
-    return st
+    result = []
+    for i,v in enumerate(arr):
+        if i == 0:
+            result.append(v)
+        elif arr[i-1] != arr[i] :
+            result.append(v)
+    return result
