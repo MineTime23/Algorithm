@@ -1,6 +1,2 @@
 def solution(n):
-    answer = ''
-    word = "수박"
-    for i in range(n):
-        answer += word[i%2]
-    return answer
+    return ''.join(["수"if i%2 == 0  else "박"for i in range(n)])
