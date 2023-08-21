@@ -1,3 +1,2 @@
 def solution(n):
-    n = str(n)
-    return [int(n[i]) for i in range(len(n)-1,-1,-1)]
+    return [int(i) for i in str(n)][::-1]
