@@ -1,2 +1,3 @@
 def solution(s):
-    return s.upper().count("P") == s.upper().count("Y")
+    s = s.lower()
+    return True if s.count("p") == s.count("y") else False
