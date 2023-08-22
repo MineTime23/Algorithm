@@ -1,13 +1,14 @@
 import heapq
 def solution(k, score):
     answer = []
-    heap = []
+    honor = []
+    heapq.heapify(honor)
     for i in score:
-        if len(heap) < k:
-            heapq.heappush(heap,i)
+        if len(honor) <= k-1:
+            heapq.heappush(honor,i)  
         else:
-            if heap[0] < i:
-                heapq.heappop(heap)
-                heapq.heappush(heap,i)
-        answer.append(heap[0])
+            heapq.heappush(honor,i)
+            heapq.heappop(honor)
+        answer.append(honor[0])    
+    
     return answer
