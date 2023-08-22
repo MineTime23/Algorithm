@@ -1,9 +1,6 @@
 def solution(food):
     answer = ''
-    for i in range(1,len(food)):
-        if food[i]%2 == 1:
-            food[i] -= 1
-        food[i] //= 2
-        answer += f"{i}" * food[i]
-        
+    for i,v in enumerate(food):
+        if i != 0:
+            answer += (f"{i}" * (v//2))
     return answer + "0" + answer[::-1]
