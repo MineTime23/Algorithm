@@ -1,6 +1,6 @@
 import itertools
 def solution(numbers):
-    a = set()
+    result = set()
     for i in itertools.combinations(numbers,2):
-        a.add(sum(i))
-    return sorted(list(a))
+        result.add(sum(i))
+    return sorted(list(result))
