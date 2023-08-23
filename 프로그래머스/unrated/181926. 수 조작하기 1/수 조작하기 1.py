@@ -1,6 +1,3 @@
 def solution(n, control):
-    answer = n
-    dict = {"w": 1, "s":-1,"d":10,"a":-10}
-    for i in control:
-        answer += dict[i]
-    return answer
+    dict1 = {"w":1,"s":-1,"d":10,"a":-10}
+    return sum(map(lambda x : dict1[x],list(control))) + n
