@@ -3,7 +3,7 @@ def solution(angle):
         return 1
     elif angle == 90:
         return 2
-    elif angle < 180:
+    elif angle <180:
         return 3
-    elif angle == 180:
+    else:
         return 4
