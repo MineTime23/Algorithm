@@ -1,3 +1,3 @@
 def solution(numbers):
     numbers.sort()
-    return numbers[-1] * numbers[-2]
+    return max(numbers[-1]*numbers[-2],numbers[0]*numbers[1])
