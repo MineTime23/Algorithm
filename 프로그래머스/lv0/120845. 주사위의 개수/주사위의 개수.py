@@ -1,3 +1,2 @@
 def solution(box, n):
-    box = list(map(lambda x : x//n,box))
-    return box[0] * box[1] * box[2]
+    return eval('*'.join(list(map(lambda x : str(x//n),box))))
