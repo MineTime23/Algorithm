@@ -1,2 +1,2 @@
 def solution(cipher, code):
-    return cipher[code-1::code]
+    return ''.join([v for i,v in enumerate(cipher) if (i+1)%code == 0])
