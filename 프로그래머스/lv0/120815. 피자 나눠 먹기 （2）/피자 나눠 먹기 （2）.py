@@ -1,5 +1,5 @@
+# 6과 n의 공배수
+import math
+
 def solution(n):
-    answer = 1
-    while (answer * n) % 6 != 0:
-        answer += 1
-    return (answer * n)//6
+    return n*6//math.gcd(n,6)//6
