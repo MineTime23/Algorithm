@@ -1,7 +1,7 @@
 def solution(A,B):
+    A = sorted(A)
+    B = sorted(B, reverse=True)
     answer = 0
-    A.sort()
-    B.sort(reverse=True)
     for a,b in zip(A,B):
-        answer += (a*b)
+        answer += a*b
     return answer
