@@ -1,10 +1,11 @@
 def solution(s):
+    s = s.lower()
     answer = ""
     for i in range(len(s)):
-        if s[i] == " ":
-            answer += " "
-        elif (i == 0) or (i != 0 and s[i-1] == " "):
+        if i == 0:
             answer += s[i].upper()
+        elif s[i-1] == " " and s[i] != " ":
+            answer += (s[i].upper())
         else:
-            answer += s[i].lower()
+            answer += s[i]
     return answer
