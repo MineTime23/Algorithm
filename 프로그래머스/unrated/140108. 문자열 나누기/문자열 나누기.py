@@ -1,22 +1,24 @@
-from collections import defaultdict
+
 def solution(s):
     answer = 0
     temp = ""
-    main = ""
-    for i,v in enumerate(s):
+    temp_num = 0
+    other_num = 0
+    
+    for i in range(len(s)):
+        if i == 0 or temp_num == 0:
+            temp = s[i]
+            temp_num += 1
+        elif s[i] == temp:
+            temp_num += 1
+        elif s[i] != temp:
+            other_num  += 1
         
-        if temp == "":
-            data = defaultdict(int)
-        if i == 0 or temp == "":
-            temp += v
-            data[v] += 1
-            main = v
-        elif v == main:
-            temp += v
-            data[v] += 1
-        elif v != main:
-            temp += v
-        if data[main] and len(temp) // data[main] == 2:
+        if other_num == temp_num:
             answer += 1
-            temp = ""
-    return answer+1 if temp else answer
+            temp_num = 0
+            other_num = 0
+            
+    if temp_num!= 0 or other_num != 0:
+        return answer + 1
+    return answer
