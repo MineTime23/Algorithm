@@ -7,11 +7,20 @@ def solution(keymap, targets):
             if data[i[j]] == 0:
                 data[i[j]] = j+1
             else:
-                data[i[j]] = min(data[i[j]], j+1)
+                if j+1 <= data[i[j]]:
+                    data[i[j]] = j+1
+                    
+    answer = []
     for i in targets:
-        arr = list(map(lambda x : data[x] if data[x] != 0 else -1,list(i)))
-        if -1 in arr:
-            answer.append(-1)
-        else:
-            answer.append(sum(arr))
+        a = 0 
+        for j in range(len(i)):
+            if data[i[j]] == 0:
+                a = -1
+                break
+            else:
+                a += data[i[j]]
+        if a == 0:
+            a = -1
+        answer.append(a)
+    
     return answer
