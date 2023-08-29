@@ -1,10 +1,11 @@
 from collections import Counter
+
 def solution(N, stages):
+    People_num = len(stages)
     answer = []
-    arr = Counter(stages)
-    cnt = len(stages)
-    for i in range(1,N+1):
-        cnt2 = arr[i]
-        answer.append((i,cnt2/cnt if cnt != 0 else 0))
-        cnt -= cnt2
-    return [a for a,b in sorted(answer,key = lambda x : (-x[1],x[0]))]
+    stages = Counter(stages)
+    for i in range(1, N+1):
+        answer.append((i,stages[i]/People_num if People_num else 0))
+        People_num -= stages[i]
+    answer = sorted(answer, key = lambda x : -x[1])
+    return [a for a,b in answer]
