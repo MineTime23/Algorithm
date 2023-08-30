@@ -1,16 +1,22 @@
 from collections import defaultdict
 
 def solution(n, words):
-    data = defaultdict(int)
-    for idx, item in enumerate(words):
-        data[item] += 1
-        result = True
-        if data[item] == 2:
-            res = idx
-            result = False
-            break
-        if idx != 0 and item[0] != words[idx-1][-1]:
-            res = idx
-            result = False
-            break
-    return [0,0] if result else [res%n+1,res//n+1]
+    answer = []
+    data1 = defaultdict(int)
+    for i,v in enumerate(words):
+        if data1[v] != 0:
+            return [i%n + 1,i//n + 1]
+        
+        if len(v) == 1:
+            return [i%n + 1,i//n + 1]
+        
+        if i == 0:
+            data1[v] += 1
+            answer.append(v)
+        elif i != 0:
+            if answer[-1][-1] != v[0]:
+                return [i%n + 1,i//n + 1]
+            else:
+                data1[v] += 1
+                answer.append(v)
+    return [0,0]
