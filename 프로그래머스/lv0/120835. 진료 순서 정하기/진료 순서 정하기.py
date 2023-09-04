@@ -1,4 +1,7 @@
+from collections import defaultdict
 def solution(emergency):
-    sorted_emergency = sorted(emergency, reverse=True)
-    data = { v : i for i,v in enumerate(sorted_emergency)}
-    return list(map(lambda x : data[x]+1, emergency))
+    data = defaultdict(int)
+    emer = sorted(emergency)
+    for i,v in enumerate(emer):
+        data[v] = len(emergency)-i
+    return list(map(lambda x : data[x],emergency))
