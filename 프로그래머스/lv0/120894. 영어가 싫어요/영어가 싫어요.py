@@ -1,5 +1,5 @@
 def solution(numbers):
-    num = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
-    for i,v in enumerate(num):
+    answer = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+    for i,v in enumerate(answer):
         numbers = numbers.replace(v,str(i))
     return int(numbers)
