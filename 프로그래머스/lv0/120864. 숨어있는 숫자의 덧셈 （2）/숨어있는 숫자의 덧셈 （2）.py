@@ -1,13 +1,5 @@
+import re
 def solution(my_string):
-    answer = 0
-    temp = ""
-    for i in my_string:
-        if i.isnumeric():
-            temp += i
-        else:
-            if temp:
-                answer += int(temp)
-                temp = ""
-    if temp:
-        answer += int(temp)
-    return answer
+    my_string = my_string.lower()
+    my_string = re.sub("[a-z]"," ",my_string).split()
+    return sum(map(int,my_string))
