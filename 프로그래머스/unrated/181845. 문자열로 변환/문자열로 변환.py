@@ -1,2 +1,2 @@
 def solution(n):
-    return f"{n}"
+    return str(n)
