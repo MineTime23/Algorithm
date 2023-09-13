@@ -1,2 +1,3 @@
 def solution(strArr):
-    return [item.lower() if i%2 == 0 else item.upper() for i,item in enumerate(strArr) ]
+    answer = [v.lower() if i%2 == 0 else v.upper() for i,v in enumerate(strArr)]
+    return answer
