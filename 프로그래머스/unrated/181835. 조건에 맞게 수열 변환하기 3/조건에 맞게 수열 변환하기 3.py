@@ -1,5 +1,6 @@
 def solution(arr, k):
-    if k%2 == 1:
-        return list(map(lambda x : k * x,arr))
+    if k % 2 == 1:
+        arr = list(map(lambda x : x * k,arr))
     else:
-        return list(map(lambda x : k + x,arr))
+        arr = list(map(lambda x : x + k,arr))
+    return arr
