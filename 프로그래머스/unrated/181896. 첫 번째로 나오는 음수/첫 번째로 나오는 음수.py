@@ -1,5 +1,5 @@
 def solution(num_list):
-    for idx,item in enumerate(num_list):
-        if item < 0:
-            return idx
+    for i,v in enumerate(num_list):
+        if v < 0:
+            return i
     return -1
