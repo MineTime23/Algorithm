@@ -1,22 +1,31 @@
-result = []
-answer = 0
-
-def mv(board, n):
-    global answer
-    for i in range(len(board[0])):
-        if board[n][i] != 0:
-            if result and result[-1] != board[n][i]:
-                result.append(board[n][i])
-            elif result and result[-1] == board[n][i]:
-                result.pop()
-                answer += 2
-            elif not result:
-                result.append(board[n][i])
-            board[n][i] = 0
-            break
-
 def solution(board, moves):
-    board = list(map(list,zip(*board)))
+    answer = 0
+    arrange = []
+    basket = []
+    
+    for x in range(len(board)):
+        new = []
+        for y in range(len(board)-1,-1,-1):
+            new.append(board[y][x])
+        arrange.append(new)
+    #print(arrange)
+    
     for i in moves:
-        mv(board, i-1)
+        cnt = 0
+        for j in range(len(arrange[i-1])):
+            if arrange[i-1][j] == 0:
+                break
+            else:
+                cnt += 1
+        if cnt == 0:
+            continue
+        else:
+            if basket and basket[-1] == arrange[i-1][cnt-1]:
+                answer += 2
+                basket.pop()
+            else:
+                basket.append(arrange[i-1][cnt-1])
+            arrange[i-1][cnt-1] = 0
+            
+    #print(basket)
     return answer
