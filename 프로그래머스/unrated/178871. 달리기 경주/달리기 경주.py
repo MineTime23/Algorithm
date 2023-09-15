@@ -1,12 +1,14 @@
 from collections import defaultdict
+
 def solution(players, callings):
-    data = defaultdict(int)
-    for i in range(len(players)):
-        data[players[i]] = i
+    answer = []
+    idx_data = defaultdict(int)
+    for i,v in enumerate(players):
+        idx_data[v] = i
+    #print(idx_data.items())
     for i in callings:
-        num = data[i]
-        front = players[num-1]
-        players[num], players[num-1] = players[num-1], players[num] 
-        data[i] -= 1
-        data[front] += 1
+        idx = idx_data[i]
+        idx_data[i] = idx-1
+        idx_data[players[idx-1]] = idx
+        players[idx], players[idx-1] = players[idx-1], players[idx]
     return players
