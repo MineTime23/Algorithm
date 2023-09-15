@@ -1,6 +1,4 @@
+import re
 def solution(myString):
-    myString = list(myString)
-    for i in range(len(myString)):
-        if myString[i] < "l":
-            myString[i] = "l"        
-    return ''.join(myString)
+    myString = re.sub("[a-k]","l",myString)
+    return myString
