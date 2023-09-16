@@ -1,9 +1,10 @@
 def solution(n, arr1, arr2):
     answer = []
-    for i in range(n):
-        answer.append(bin(arr1[i]|arr2[i])[2:])
-        answer[-1] = answer[-1].replace("1","#")
-        answer[-1] = answer[-1].replace("0"," ")
-        if len(answer[-1]) < n:
-            answer[-1] = " " * (n-len(answer[-1])) + answer[-1]
+    for a,b in zip(arr1,arr2):
+        res = bin(a|b)[2:]
+        if len(res) < n:
+            res = " " * (n - len(res)) + res
+        res = res.replace("1","#")
+        res = res.replace("0"," ")
+        answer.append(res)
     return answer
