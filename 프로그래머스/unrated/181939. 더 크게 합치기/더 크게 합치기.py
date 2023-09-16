@@ -1,3 +1,2 @@
 def solution(a, b):
-    return int(max((str(a)+str(b)),(str(b)+str(a))))
-    
+    return max(int(str(a)+str(b)),int(str(b)+str(a)))
