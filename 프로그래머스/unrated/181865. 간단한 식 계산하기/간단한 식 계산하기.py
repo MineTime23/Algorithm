@@ -1,2 +1,2 @@
 def solution(binomial):
-    return int(eval(binomial))
+    return eval(binomial)
