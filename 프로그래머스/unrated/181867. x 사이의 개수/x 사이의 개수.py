@@ -1,2 +1,2 @@
 def solution(myString):
-    return list(map(len,myString.split("x")))
+    return [len(i) for i in myString.split("x")]
