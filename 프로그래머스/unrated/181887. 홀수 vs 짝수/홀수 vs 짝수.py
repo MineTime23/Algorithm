@@ -1,2 +1,11 @@
 def solution(num_list):
-    return max(sum([v for i,v in enumerate(num_list) if i%2 == 0]),sum([v for i,v in enumerate(num_list) if i%2 == 1]))
+    answer = 0
+    a = 0
+    b = 0
+    for i in range(len(num_list)):
+        if i % 2 == 0:
+            a += num_list[i]
+        else:
+            b += num_list[i]
+
+    return max(a,b)
