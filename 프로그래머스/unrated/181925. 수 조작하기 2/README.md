@@ -4,7 +4,7 @@
 
 ### 성능 요약
 
-메모리: 13.9 MB, 시간: 23.08 ms
+메모리: 13.3 MB, 시간: 10.15 ms
 
 ### 구분
 
@@ -34,11 +34,11 @@ Empty
 <h5>제한사항</h5>
 
 <ul>
-<li>2 ≤ <code>log</code>의 길이 ≤ 100,000
+<li>2 ≤ <code>numLog</code>의 길이 ≤ 100,000
 
 <ul>
-<li>-100,000 ≤ <code>log[0]</code> ≤ 100,000</li>
-<li>1 ≤ <code>i</code> ≤ <code>log</code>의 길이인 모든 <code>i</code>에 대해 <code>|log[i] - log[i - 1]|</code>의 값은 1 또는 10입니다.</li>
+<li>-100,000 ≤ <code>numLog[0]</code> ≤ 100,000</li>
+<li>1 ≤ <code>i</code> ≤ <code>numLog</code>의 길이인 모든 <code>i</code>에 대해 <code>|numLog[i] - numLog[i - 1]|</code>의 값은 1 또는 10입니다.</li>
 </ul></li>
 </ul>
 
@@ -47,7 +47,7 @@ Empty
 <h5>입출력 예</h5>
 <table class="table">
         <thead><tr>
-<th>log</th>
+<th>numLog</th>
 <th>result</th>
 </tr>
 </thead>
@@ -64,14 +64,14 @@ Empty
 <p>입출력 예 #1</p>
 
 <ul>
-<li>result인 "wsdawsdassw"를 따라 <code>log[0]</code>에서부터 시작해 조작을 하면 <code>log</code>의 값과 순서대로 일치합니다. 따라서 "wsdawsdassw"를 return 합니다.</li>
+<li>result인 "wsdawsdassw"를 따라 <code>numLog[0]</code>에서부터 시작해 조작을 하면 <code>numLog</code>의 값과 순서대로 일치합니다. 따라서 "wsdawsdassw"를 return 합니다.</li>
 </ul>
 
 <hr>
 
 <h5>Hint</h5>
 
-<p>"수 조작하기 1" 문제의 <code>n</code>값이 <code>log[0]</code>에 해당하며, 이 문제에서 주어진 <code>log</code>에 따라 "수 조작하기 1" 문제의 <code>control</code>을 구하는 문제라고 이해할 수 있습니다.</p>
+<p>"수 조작하기 1" 문제의 <code>n</code>값이 <code>numLog[0]</code>에 해당하며, 이 문제에서 주어진 <code>numLog</code>에 따라 "수 조작하기 1" 문제의 <code>control</code>을 구하는 문제라고 이해할 수 있습니다.</p>
 
 <p>입출력 예 #1은 "수 조작하기 1" 문제의 입출력 예 #1과 같은 예시이므로 참고하시기 바랍니다.</p>
 
