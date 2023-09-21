@@ -1,6 +1,6 @@
 def solution(brown, yellow):
-    num = brown + yellow
-    num2 = (brown + 4)//2
-    for i in range(2, num):
-        if num % i == 0 and (i + num//i) == num2:
-            return [max(num//i,i),min(num//i,i)]
+    sum_ab =(brown - 4)//2
+    for i in range(1,int(yellow**0.5)+1):
+        if yellow % i == 0:
+            if i + (yellow//i) == sum_ab:
+                return [(yellow//i)+2 ,i+2]
