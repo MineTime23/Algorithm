@@ -1,8 +1,7 @@
 def solution(arr):
-    answer = []
-    for i in range(len(arr)):
-        if arr[i] >= 50 and arr[i]%2 == 0:
-            arr[i] = arr[i]//2
-        elif arr[i] < 50 and arr[i]%2 == 1:
-            arr[i] = arr[i]*2
+    for i,v in enumerate(arr):
+        if v >= 50 and v % 2 == 0:
+            arr[i] //= 2
+        elif v < 50 and v % 2 == 1:
+            arr[i] *= 2
     return arr
