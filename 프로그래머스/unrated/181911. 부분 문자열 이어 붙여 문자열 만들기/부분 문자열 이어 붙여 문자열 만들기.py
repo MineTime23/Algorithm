@@ -1,6 +1,5 @@
 def solution(my_strings, parts):
     answer = ''
-    for i in range(len(my_strings)):
-        a,b = parts[i]
-        answer += my_strings[i][a:b+1]
+    for a, b in zip(my_strings,parts):
+        answer += a[b[0]:b[1]+1]
     return answer
