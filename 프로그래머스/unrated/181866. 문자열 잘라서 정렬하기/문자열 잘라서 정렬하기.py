@@ -1,2 +1,3 @@
 def solution(myString):
-    return [i for i in sorted(myString.split("x")) if i != ""]
+    myString = myString.split("x")
+    return [i for i in sorted(myString) if i != ""]

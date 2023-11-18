@@ -1,10 +1,10 @@
-# [unrated] 문자열 잘라서 정렬하기 - 181866 
+# [level unrated] 문자열 잘라서 정렬하기 - 181866 
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181866) 
 
 ### 성능 요약
 
-메모리: 11.8 MB, 시간: 6.03 ms
+메모리: 11.8 MB, 시간: 4.14 ms
 
 ### 구분
 
@@ -12,7 +12,11 @@
 
 ### 채점결과
 
-Empty
+정확성: 100.0<br/>합계: 100.0 / 100.0
+
+### 제출 일자
+
+2023년 11월 6일 20:59:23
 
 ### 문제 설명
 
@@ -68,4 +72,4 @@ Empty
 </ul>
 
 
-> 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
+> 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
