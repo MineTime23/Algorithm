@@ -1,4 +1,8 @@
-import re
 def solution(myString):
-    myString = re.sub("[a-k]","l",myString)
-    return myString
+    answer = ''
+    for i in myString:
+        if ord(i) < 108:
+            answer += "l"
+        else:
+            answer += i
+    return answer
