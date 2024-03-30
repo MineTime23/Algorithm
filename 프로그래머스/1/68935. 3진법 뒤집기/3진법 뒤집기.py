@@ -1,10 +1,7 @@
-def make_3(n):
-    result = []
-    while n != 0:
-        result.append(str(n%3))
-        n //= 3
-    return ''.join(result)
-        
-
 def solution(n):
-    return int(make_3(n),3)
+    answer = ""
+    while n // 3 != 0:
+        answer += str(n%3)
+        n //= 3
+    answer += str(n)
+    return int(answer, 3)
