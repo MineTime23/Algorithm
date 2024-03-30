@@ -1,8 +1,11 @@
+
+
 def solution(arr):
+    answer = []
     stack = []
-    for i,v in enumerate(arr):
-        if i == 0:
-            stack.append(v)
-        elif stack[-1] != v:
-            stack.append(v)
-    return stack
+    
+    for i in arr:
+        if not stack or stack[-1] != i:
+            answer.append(i)
+            stack.append(i)
+    return answer
