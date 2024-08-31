@@ -1,12 +1,16 @@
 def solution(num):
-    answer = 0
-    while num != 1:
-        if answer == 500:
-            return -1
-        if num % 2 == 0:
+    
+    if num == 1:
+        return 0
+    
+    cnt = 0
+    for i in range(500):
+        if num == 1:
+            return cnt 
+        
+        if num % 2 == 0:    
             num //= 2
-            answer += 1
         else:
             num = num * 3 + 1
-            answer += 1       
-    return answer
+        cnt += 1
+    return -1
