@@ -1,2 +1,5 @@
 def solution(x):
-    return x % sum(list(map(int,list(str(x))))) == 0
+    res = 0
+    for i in str(x):
+        res += int(i)
+    return x % res == 0
